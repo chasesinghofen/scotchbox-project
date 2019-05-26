@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+   <head>
+      <title>{{ title }}</title>
+   </head>
+
+   <body>
+      <h1>Hello, World!</h1>
+      <h2>The date and time on the server is: {{ time }}</h2>
+      {% if data %}
+      
+      <tr>
+      {% for pic in data %}
+            <td align="center">
+               <a href="/static/images/{{ pic }}.jpg">
+                   <img src="/static/images/thumbs/{{ pic }}.png" alt="Bat Picture">
+               </a>   
+            
+      {% endfor %}
+   </tr>
+      {% else %}
+      <p>We didnâ€™t get any pics:(</p>
+      {% endif %}
+   </body>
+</html>
